@@ -5,3 +5,22 @@ font color:
 secondary color:   
 tertiary color:    
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Oswald&display=swap');
+
+@keyframes appear {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+header {
+    margin: 0 4rem;
+    font-family: 'Oswald', regular;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    animation-name: appear;
+    animation-duration: 3s;
+}
