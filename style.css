@@ -8,19 +8,89 @@ tertiary color:
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Oswald&display=swap');
 
+
+:root {
+    --background_color: #393E46;
+    --font_color: #CBF1F5;
+    --secondary_color: #E3FDFD;
+    --box: #222831;
+    --link: #3282B8;
+    --hover: #E84545;
+}
+
 @keyframes appear {
   from {opacity: 0;}
   to {opacity: 1;}
 }
 
+@keyframes change {
+  from {color: red;}
+  to {color: purple;}
+}
+
+body {
+    background-color: var(--background_color);
+    color: var(--secondary_color);
+}
+
 header {
+    color: var(--font_color);
     margin: 0 4rem;
     font-family: 'Oswald', regular;
     letter-spacing: 0.2rem;
     text-align: center;
-    padding: 0.5rem;
+    padding: 0rem;
     text-transform: uppercase;
-    font-size: 1.1rem;
+    font-size: 1.75rem;
     animation-name: appear;
-    animation-duration: 3s;
+    animation-duration: 2s;
+}
+
+.ImageCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 7rem 4rem;
+    animation-name: appear;
+    animation-duration: 5s;
+}
+
+.ImageCard img {
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.ImageCard a {
+    text-decoration: none;
+    color: var(--link);
+}
+
+.cardText {
+    background-color: var(--box);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 20px;
+    margin-top: 2rem;
+}
+
+a:hover {
+    color: var(--hover);
+}
+
+@media (min-width: 768px) {
+    header {
+        font-size: 1.6rem;
+    }
+    
+    .gallery {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    
+    .ImageCard {
+        max-width: 28%;
+    }
 }
