@@ -10,10 +10,10 @@ tertiary color:
 
 
 :root {
-    --background_color: #393E46;
+    --background_color: #3F0071;
     --font_color: #CBF1F5;
     --secondary_color: #E3FDFD;
-    --box: #222831;
+    --box: #150050;
     --link: #3282B8;
     --hover: #E84545;
 }
@@ -29,7 +29,7 @@ tertiary color:
 }
 
 body {
-    background-color: var(--background_color);
+    background-image: linear-gradient(#150050, #3F0071, #3F0071, #3282B8, #3282B8);
     color: var(--secondary_color);
 }
 
@@ -44,6 +44,7 @@ header {
     font-size: 1.75rem;
     animation-name: appear;
     animation-duration: 2s;
+    text-shadow: 0px 4px 2px #3282B8;
 }
 
 .ImageCard {
@@ -53,12 +54,24 @@ header {
     align-items: center;
     margin: 7rem 4rem;
     animation-name: appear;
-    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
 }
 
 .ImageCard img {
     border-radius: 30px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 8px 6px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@keyframes thick {
+    from {border: 0px solid;}
+    to {border: 8px solid;}
+}
+
+.ImageCard img:hover {
+    animation-name: thick;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
 }
 
 .ImageCard a {
