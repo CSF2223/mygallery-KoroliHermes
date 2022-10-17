@@ -23,11 +23,6 @@ tertiary color:
   to {opacity: 1;}
 }
 
-@keyframes change {
-  from {color: red;}
-  to {color: purple;}
-}
-
 body {
     background-image: linear-gradient(#150050, #3F0071, #3F0071, #3282B8, #3282B8);
     color: var(--secondary_color);
@@ -68,12 +63,12 @@ header {
     to {border: 8px solid;}
 }
 
-.ImageCard img:hover {
+/*.ImageCard img:hover {
     animation-name: thick;
     animation-duration: 0.25s;
     animation-fill-mode: forwards;
 }
-
+*/
 .ImageCard a {
     text-decoration: none;
     color: var(--link);
@@ -91,6 +86,43 @@ a:hover {
     color: var(--hover);
 }
 
+.yellow img:hover {
+    filter: drop-shadow(0em .2em .2em yellow);
+}
+
+.red img:hover {
+    filter: drop-shadow(0em .2em .2em #ff6161);
+}
+
+.green img:hover {
+    filter: drop-shadow(0em .2em .2em #66ff00);
+}
+
+.gray img:hover {
+    filter: drop-shadow(0em .2em .2em lightgray);
+}
+
+.white img:hover {
+    filter: drop-shadow(0em .2em .2em white);
+}
+
+.blue img:hover {
+    filter: drop-shadow(0em .2em .2em cyan);
+}
+
+.salmon img:hover {
+    filter: drop-shadow(0em .5em .2em #FA8072);
+}
+
+img:hover {
+    transform: scale(1.05);
+    filter: brightness(150%);
+    filter: drop-shadow(0em .3em .3em);
+}
+img {
+    transition: transform .2s, filter .3s; /* Animation */
+}
+
 @media (min-width: 768px) {
     header {
         font-size: 1.6rem;
@@ -104,6 +136,6 @@ a:hover {
     }
     
     .ImageCard {
-        max-width: 28%;
+        max-width: 30%;
     }
 }
